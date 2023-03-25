@@ -1,0 +1,12 @@
+{% extends "market_app/index.html" %}
+
+{% block content %}
+    <div class="container mt-5 pt-3">
+        <h2>Products Categories</h2>
+        <div class="list-group">
+            {% for category in categories %}
+            <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action">{{category.title}}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
